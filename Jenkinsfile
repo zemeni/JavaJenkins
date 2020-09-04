@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('clean') { 
             steps {
-                bat "mvn clean -f JavaJenkins"
+                bat "mvn clean"
             }
         }
         stage('Test') { 
             steps {
-                bat "mvn test -f JavaJenkins"
+                bat "mvn test"
             }
         }
         stage('Deploy') { 
             steps {
-                bat "mvn package -f JavaJenkins"
+                bat "mvn package"
             }
         }
     }
